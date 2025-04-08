@@ -1,10 +1,7 @@
-// src/pages/Portfolio.tsx
-
 import React, { useState } from 'react';
 import { FaLinkedin, FaFacebook, FaWhatsapp, FaEnvelope, FaPaperclip, FaTelegram } from 'react-icons/fa';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
-// Image imports (replace with your actual image paths)
 const projectImages = [
   './src/components/images/farming-image.jpg',
   './src/components/images/rural-sensitization-image.jpg',
@@ -198,7 +195,7 @@ const Portfolio = () => {
             disabled={isLoading}
           >
             {isLoading ? (
-              <span className="loader"></span> // Spinner instead of text
+              <span className="loader"></span> // Spinner
             ) : (
               'Send Message'
             )}
