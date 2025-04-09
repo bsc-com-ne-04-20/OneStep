@@ -10,7 +10,7 @@ const projectImages = [
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [showContactForm, setShowContactForm] = useState(false); // New state for controlling the contact form visibility
+  const [showContactForm, setShowContactForm] = useState(false); // New add state for controlling the contact form visibility 
   const [formData, setFormData] = useState({ name: '', email: '', message: '', file: null });
   const [errorMessage, setErrorMessage] = useState('');
   const [notification, setNotification] = useState({ type: '', message: '' });
@@ -48,7 +48,7 @@ const Portfolio = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
+      const response = await fetch('https://onestepport.onrender.com/send-email', {
         method: 'POST',
         body: formDataToSend,
       });
@@ -221,7 +221,7 @@ const Portfolio = () => {
           </form>
         )}
       </section>
-
+{/** animation for loading*/}
       <style jsx>{`
         .loader {
           border: 4px solid white;
